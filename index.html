@@ -1,82 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <header class="main-header">
+    <div class="main-header__info">
+      <h1>Social Media Dashboard</h1>
+      <p>Total Followers: 23,004</p>
+    </div>
+    <div class="main-header__toggle">
+      <p class="toggle-title">Dark Mode</p>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
 
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+  <main>
+    <section>
+      <div class="top-dashboard">
+        <div class="top-dashboard__card">
+          <div class="card__socials">
+            <img class="card__socials-icon" src="images/icon-facebook.svg" alt="facebook-icon">
+            <p>@nathanf</p>
+          </div>
+          <div class="card__info">
+            <h1 class="card__info-header">1987</h1>
+            <p class="card__info-subheader">followers</p>
+          </div>
+          <div class="card__scores">
+            <img src="images/icon-up.svg" alt="icon-up-icon">
+            <p class="card__scores-result positive">12 Today</p>
+          </div>
+        </div>
 
 
+        <div class="top-dashboard__card">
+          <div class="card__socials">
+            <img class="card__socials-icon" src="images/icon-twitter.svg" alt="twitter-icon">
+            <p>@nathanf</p>
+          </div>
+          <div class="card__info">
+            <h1 class="card__info-header">1044</h1>
+            <p class="card__info-subheader">followers</p>
+          </div>
+          <div class="card__scores">
+            <img src="images/icon-up.svg" alt="icon-up-icon">
+            <p class="card__scores-result positive">99 Today</p>
+          </div>
+        </div>
 
-  Overview - Today
 
-  Page Views
-  87
-  3%
+        <div class="top-dashboard__card">
+          <div class="card__socials">
+            <img class="card__socials-icon" src="images/icon-instagram.svg" alt="twitter-icon">
+            <p>@realnathanf</p>
+          </div>
+          <div class="card__info">
+            <h1 class="card__info-header">11k</h1>
+            <p class="card__info-subheader">followers</p>
+          </div>
+          <div class="card__scores">
+            <img src="images/icon-up.svg" alt="icon-up-icon">
+            <p class="card__scores-result positive">1099 Today</p>
+          </div>
+        </div>
 
-  Likes
-  52
-  2%
 
-  Likes
-  5462
-  2257%
+        <div class="top-dashboard__card">
+          <div class="card__socials">
+            <img class="card__socials-icon" src="images/icon-youtube.svg" alt="twitter-icon">
+            <p>Nathan F.</p>
+          </div>
+          <div class="card__info">
+            <h1 class="card__info-header">8239</h1>
+            <p class="card__info-subheader">subscribers</p>
+          </div>
+          <div class="card__scores">
+            <img src="images/icon-down.svg" alt="icon-up-icon">
+            <p class="card__scores-result negative">144 Today</p>
+          </div>
+        </div>
+      </div>
 
-  Profile Views
-  52k
-  1375%
+      <div class="bottom-dashboard">
+        <h2>Overview - Today</h2>
+        <div class="bottom-dasboard__cards">
 
-  Retweets
-  117
-  303%
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Page Views</h3>
+              <p class="card-result__number">87</p>
+            </div>
 
-  Likes
-  507
-  553%
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-facebook.svg" alt="facebook-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-up.svg" alt="icon-up-icon">
+                <p class="card__scores-result positive">3%</p>
+              </div>
+            </div>
+          </div>
 
-  Likes
-  107
-  19%
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Likes</h3>
+              <p class="card-result__number">52</p>
+            </div>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-facebook.svg" alt="facebook-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-down.svg" alt="icon-down-icon">
+                <p class="card__scores-result negative">2%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Likes</h3>
+              <p class="card-result__number">5462</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-instagram.svg" alt="instagram-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-up.svg" alt="icon-up-icon">
+                <p class="card__scores-result positive">2257%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Profile Views</h3>
+              <p class="card-result__number">1375%</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-instagram.svg" alt="instagram-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-up.svg" alt="icon-up-icon">
+                <p class="card__scores-result positive">1375%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Retweets</h3>
+              <p class="card-result__number">117</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-twitter.svg" alt="twitter-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-up.svg" alt="icon-up-icon">
+                <p class="card__scores-result positive">303%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Likes</h3>
+              <p class="card-result__number">507</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-twitter.svg" alt="twitter-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-up.svg" alt="icon-up-icon">
+                <p class="card__scores-result positive">533%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Likes</h3>
+              <p class="card-result__number">107</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-youtube.svg" alt="youtube-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-down.svg" alt="icon-down-icon">
+                <p class="card__scores-result positive">19%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-dasboard__cards-card">
+            <div class="card-result">
+              <h3 class="card-result__header">Total Views</h3>
+              <p class="card-result__number">1407</p>
+            </div>
+
+            <div class="card-social-results">
+              <img class="card-social-results__icon" src="images/icon-youtube.svg" alt="youtube-icon">
+              <div class="card-social-results__status">
+                <img src="images/icon-down.svg" alt="icon-down-icon">
+                <p class="card__scores-result positive">12%</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>

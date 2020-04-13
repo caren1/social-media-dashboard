@@ -16,35 +16,112 @@ mainBackground = document.querySelector('body');
 
 mainHeaderHeading = document.querySelector('.main-header__info h1');
 
+subheaders = document.querySelectorAll('.card__info-subheader');
 
-toggleBtn.addEventListener('click', toggleTheme);
+resultHeaders = document.querySelectorAll('.card-result__header');
 
-function toggleTheme() {
+cardSocialsParagraphs = document.querySelectorAll('.card__socials p');
+
+bottomDashboardHeading = document.querySelector('.bottom-dashboard h2');
+
+
+toggleBtn.addEventListener('click', function () {
+
+    var toggleCheckbox = document.getElementById('toggle-checkbox');
+    if (toggleCheckbox.checked) {
+
+        addDarkTheme();
+    } else {
+        removeDarkTheme();
+    }
+});
+
+
+function addDarkTheme() {
 
     topNumbers.forEach(element => {
-        toggleClasslist(element, 'darktheme-heading');
+        addClasslist(element, 'darktheme-heading');
     });
 
     bottomNumbers.forEach(element => {
-        toggleClasslist(element, 'darktheme-heading');  
+        addClasslist(element, 'darktheme-heading');
     });
 
     topCardsBackgrounds.forEach(element => {
-        toggleClasslist(element, 'darktheme-cardbg')
+        addClasslist(element, 'darktheme-cardbg')
     });
 
     bottomCardsBackgrounds.forEach(element => {
-        toggleClasslist(element, 'darktheme-cardbg')
+        addClasslist(element, 'darktheme-cardbg')
     });
 
-    toggleClasslist(topBackground, 'darktheme-topbackground');
+    addClasslist(topBackground, 'darktheme-topbackground');
 
-    toggleClasslist(mainBackground, 'darktheme-background');
+    addClasslist(mainBackground, 'darktheme-background');
 
-    toggleClasslist(mainHeaderHeading, 'darktheme-heading');
+    addClasslist(mainHeaderHeading, 'darktheme-heading');
 
+    addClasslist(bottomDashboardHeading, 'darktheme-heading');
+
+    subheaders.forEach(element => {
+        addClasslist(element, 'darktheme-text');
+    });
+
+    resultHeaders.forEach(element => {
+        addClasslist(element, 'darktheme-text');
+    });
+
+    cardSocialsParagraphs.forEach(element => {
+        addClasslist(element, 'darktheme-text');
+    });
 }
 
-function toggleClasslist(element, cls) {
+function removeDarkTheme() {
+    topNumbers.forEach(element => {
+        removeClassList(element, 'darktheme-heading');
+    });
+
+    bottomNumbers.forEach(element => {
+        removeClassList(element, 'darktheme-heading');
+    });
+
+    topCardsBackgrounds.forEach(element => {
+        removeClassList(element, 'darktheme-cardbg')
+    });
+
+    bottomCardsBackgrounds.forEach(element => {
+        removeClassList(element, 'darktheme-cardbg')
+    });
+
+    removeClassList(topBackground, 'darktheme-topbackground');
+
+    removeClassList(mainBackground, 'darktheme-background');
+
+    removeClassList(mainHeaderHeading, 'darktheme-heading');
+
+    removeClassList(bottomDashboardHeading, 'darktheme-heading');
+
+    subheaders.forEach(element => {
+        removeClassList(element, 'darktheme-text');
+    });
+
+    resultHeaders.forEach(element => {
+        removeClassList(element, 'darktheme-text');
+    });
+
+    cardSocialsParagraphs.forEach(element => {
+        removeClassList(element, 'darktheme-text');
+    });
+}
+
+function addClasslist(element, cls) {
     element.classList.add(cls);
+    element.style.transition = "color 0.5s";
+    element.style.transition = "background-color 1s";
+}
+
+function removeClassList(element, cls) {
+    element.classList.remove(cls);
+    element.style.transition = "color 0.5s";
+    element.style.transition = "background-color 1s";
 }

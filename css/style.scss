@@ -1,47 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-$limeGreen: hsl(163, 72%, 41%);
-$brightRed: hsl(356, 69%, 56%);
-$facebook: hsl(195, 100%, 50%);
-$twitter: hsl(203, 89%, 53%);
-$instagram: linear-gradient(to right,
-    hsl(37, 97%, 70%),
-    hsl(329, 70%, 58%)) 1;
-
-$youtube: hsl(348, 97%, 39%);
-
-$darkThemeToggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
-$lightThemeToggle: hsl(230, 22%, 74%);
-
-/* DARK THEME */
-
-// background 
-$veryDarkBlueBG: hsl(230, 17%, 14%);
-// top background pattern
-$veryDarkBlueTopBG: hsl(232, 19%, 15%);
-// card background
-$darkDesaturatedBlue: hsl(228, 28%, 20%);
-// text 
-$desaturatedBlue: hsl(228, 34%, 66%);
-// white text
-$white-darktheme: hsl(0, 0%, 100%);
-
-/* LIGHT THEME */
-// background
-$white-lighttheme: hsl(0, 0%, 100%);
-// top background pattern 
-$veryPaleBlue-lighttheme: hsl(225, 100%, 98%);
-// card background 
-$lightGrayishBlue-lighttheme: hsl(227, 47%, 96%);
-// text
-$darkGrayishBlue-lighttheme: hsl(228, 12%, 44%);
-// dark text
-$veryDarkBlue: hsl(230, 17%, 14%);
-
-$toggle: hsl(230, 22%, 74%);
-
-$inter: 'Inter',
-sans-serif;
+@import "variables";
 
 html {
     margin: 0;
@@ -72,7 +30,7 @@ body {
         
         h1 {
             color: $veryDarkBlue;
-            font-size: 1.8em;
+            font-size: 1.7em;
             font-weight: 700;
         }
 
@@ -139,7 +97,7 @@ body {
         }
 
         input:checked+.slider {
-            background-color: $toggle;
+            background-image: $darkThemeToggle;
         }
 
         input:focus+.slider {
@@ -150,6 +108,8 @@ body {
             -webkit-transform: translateX(26px);
             -ms-transform: translateX(26px);
             transform: translateX(26px);
+            background-color: $darkDesaturatedBlue;
+           
         }
 
         /* Rounded sliders */
@@ -361,6 +321,10 @@ body {
     color: $white-darktheme !important;
 }
 
+.darktheme-text {
+    color: $desaturatedBlue !important;
+}
+
 .darktheme-cardbg {
     background-color: $darkDesaturatedBlue !important;
 }
@@ -371,4 +335,8 @@ body {
 
 .darktheme-topbackground {
     background-color: $veryDarkBlueTopBG !important;
+}
+
+.toggleBackground-darktheme {
+    background-color: $darkThemeToggle;
 }

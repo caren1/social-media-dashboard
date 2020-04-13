@@ -24,6 +24,8 @@ cardSocialsParagraphs = document.querySelectorAll('.card__socials p');
 
 bottomDashboardHeading = document.querySelector('.bottom-dashboard h2');
 
+darkCards = document.querySelectorAll('.top-dashboard__card ' + ',' + '.bottom-dashboard__cards-card');
+
 
 toggleBtn.addEventListener('click', function () {
 
@@ -48,11 +50,11 @@ function addDarkTheme() {
     });
 
     topCardsBackgrounds.forEach(element => {
-        addClasslist(element, 'darktheme-cardbg')
+        addClasslist(element, 'darktheme-cardbg');
     });
 
     bottomCardsBackgrounds.forEach(element => {
-        addClasslist(element, 'darktheme-cardbg')
+        addClasslist(element, 'darktheme-cardbg');
     });
 
     addClasslist(topBackground, 'darktheme-topbackground');
@@ -118,6 +120,7 @@ function addClasslist(element, cls) {
     element.classList.add(cls);
     element.style.transition = "color 0.5s";
     element.style.transition = "background-color 1s";
+
 }
 
 function removeClassList(element, cls) {

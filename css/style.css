@@ -340,6 +340,78 @@ body {
   margin-left: 0.2em;
 }
 
+@media only screen and (min-width: 1000px) {
+  body {
+    padding: 0;
+  }
+  .main-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1em 5em 5em 5em;
+  }
+  .main-header .main-header__info hr {
+    display: none;
+  }
+  .main-header .main-header__toggle p {
+    margin-right: 0.5em;
+    color: #63687e;
+  }
+  .dashboard {
+    top: -80px;
+  }
+  .dashboard .top-dashboard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard .top-dashboard .top-dashboard__card {
+    min-height: 150px;
+    min-width: 180px;
+    margin: 0 0.5em 0 0.5em;
+  }
+  .dashboard .top-dashboard .top-dashboard__card:hover {
+    background-color: gainsboro;
+  }
+  .dashboard .top-dashboard .top-dashboard__card .card__info p {
+    color: #63687e;
+  }
+  .bottom-dashboard .bottom-dashboard__cards {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2em;
+  }
+  .bottom-dashboard .bottom-dashboard__cards .bottom-dashboard__cards-card {
+    min-width: 150px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 15%;
+            flex: 1 1 15%;
+  }
+  .bottom-dashboard .bottom-dashboard__cards .bottom-dashboard__cards-card:hover {
+    background-color: gainsboro;
+  }
+}
+
 .positive {
   color: #1db489;
   font-weight: 700;
@@ -364,6 +436,10 @@ body {
 
 .darktheme-background {
   background-color: #1e202a !important;
+}
+
+.darktheme-backgroundhover {
+  background-color: red;
 }
 
 .darktheme-topbackground {

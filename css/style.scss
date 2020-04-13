@@ -20,14 +20,10 @@ body {
     background-color: $veryPaleBlue-lighttheme;
     border-radius: 1em;
     padding: 1em 1em 4em 1em;
-    // padding: 0 0 4em 0;
     z-index: 0;
 
-
-    // justify-content: space-between;
-
     .main-header__info {
-        
+
         h1 {
             color: $veryDarkBlue;
             font-size: 1.7em;
@@ -61,7 +57,7 @@ body {
             display: inline-block;
             width: 53px;
             height: 26px;
-    
+
         }
 
         /* Hide default HTML checkbox */
@@ -109,7 +105,7 @@ body {
             -ms-transform: translateX(26px);
             transform: translateX(26px);
             background-color: $darkDesaturatedBlue;
-           
+
         }
 
         /* Rounded sliders */
@@ -247,7 +243,7 @@ body {
         .bottom-dashboard__cards {
             display: flex;
             flex-direction: column;
-            
+
 
             .bottom-dashboard__cards-card {
                 display: flex;
@@ -257,21 +253,19 @@ body {
                 margin: 0.5em;
                 border-radius: 1em;
                 background-color: $lightGrayishBlue-lighttheme;
-                // height: 100%;
-                // min-height: 130px;
 
                 .card-result {
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                
-                    
-                    
+
+
+
                     h3 {
                         font-size: 1.1em;
                         color: $darkGrayishBlue-lighttheme;
-                        
+
                     }
 
                     p {
@@ -280,24 +274,25 @@ body {
                         font-size: 2.5em;
                         margin: 0;
                     }
- 
+
                 }
-                .card-social-results{
+
+                .card-social-results {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
                     margin-top: 1em;
 
-                    
+
                     .card-social-results__status {
                         margin-top: 1em;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                    
-                       
 
-                        > p.card__scores-result {
+
+
+                        >p.card__scores-result {
                             margin-left: 0.2em;
                         }
                     }
@@ -305,6 +300,80 @@ body {
             }
         }
     }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+        padding: 0;
+    }
+
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 5em 5em 5em;
+        .main-header__info {
+            hr {
+                display: none;
+            }
+        }
+
+        .main-header__toggle {
+            p {
+                margin-right: 0.5em;
+                color: $darkGrayishBlue-lighttheme;
+            }
+        }
+    }
+
+    .dashboard {
+        top: -80px;
+        .top-dashboard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .top-dashboard__card {
+                min-height: 150px;
+                min-width: 180px;
+                margin: 0 0.5em 0 0.5em;
+
+                &:hover {
+                    background-color: gainsboro;
+                }
+
+                .card__info {
+                    p {
+                        color: $darkGrayishBlue-lighttheme;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .bottom-dashboard {
+        .bottom-dashboard__cards {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+
+            .bottom-dashboard__cards-card {
+                min-width: 150px;
+                flex: 1 1 15%;
+                
+                &:hover {
+                    background-color: gainsboro;
+                }
+            }
+
+        }
+    }
+
+
+
 }
 
 .positive {
@@ -329,8 +398,12 @@ body {
     background-color: $darkDesaturatedBlue !important;
 }
 
-.darktheme-background{
-    background-color: $veryDarkBlueBG !important;    
+.darktheme-background {
+    background-color: $veryDarkBlueBG !important;
+}
+
+.darktheme-backgroundhover {
+    background-color: red;
 }
 
 .darktheme-topbackground {
